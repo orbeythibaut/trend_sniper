@@ -1,4 +1,42 @@
-# Run cette consigne dans le REPL/TERMINAL pour lancer le code et le test
+# Trend Sniper : Analyse Quantitative & Backtesting 🚀
+
+Ce projet est une plateforme de backtesting développée en Python, conçue pour analyser et valider des stratégies de trading hybrides sur des actifs technologiques à haute volatilité (TSLA, PLTR, HOOD). 
+
+[cite_start]L'objectif est de démontrer qu'un portefeuille combinant le suivi de tendance (**Trend**) et la capture d'événements extrêmes (**Sniper/Fat-Tails**) permet d'optimiser le ratio de Calmar et la convexité globale du portefeuille[cite: 1, 8].
+
+## 🧠 Stratégies Implémentées
+
+[cite_start]Le projet segmente l'univers d'investissement en deux clusters distincts[cite: 40, 41]:
+
+1.  **Stratégie Trend (Suivi de Tendance)** : Basée sur les cassures de canaux de Donchian (20 jours). [cite_start]Elle vise à capturer le momentum moyen terme avec une gestion stricte du risque via un Stop-Loss et un Break-Even actif[cite: 72, 74, 78].
+2.  **Stratégie Sniper (Fat-Tail Hunter)** : Exploite les phases de compression de volatilité (Bollinger Band Squeeze). [cite_start]Elle cherche à capturer des mouvements explosifs ("Cygnes Noirs") en acceptant un taux de réussite plus faible en échange d'une asymétrie positive massive[cite: 81, 83, 87].
+
+## 🛠️ Architecture Technique
+
+Conformément aux principes de génie logiciel enseignés en cours, le projet adopte une structure modulaire et orientée objet (POO) :
+
+* **`PriceSeries`** : Classe de base encapsulant les séries temporelles et les calculs de rendements (log et linéaires).
+* **`Asset`** : Représentation d'un actif financier utilisant le pattern de **Composition** sur une `PriceSeries`.
+* **`DataLoader`** : Système de récupération de données (API Yahoo Finance) avec un **système de cache avancé** gérant 5 scénarios de chevauchement temporel pour optimiser les performances.
+* **`BaseStrategy`** : Architecture d'héritage pour les moteurs de backtest, permettant une gestion standardisée de l'équité et de la comptabilité des positions.
+* **`StrategyPlotter`** : Module de visualisation dédié pour l'analyse des courbes de richesse et de la volatilité roulante.
+
+## 🚀 Installation & Utilisation
+
+Le projet utilise `uv` pour la gestion des dépendances et de l'environnement virtuel.
+
+### Installation
+```bash
+# Cloner le repository
+git clone [https://github.com/orbeythibaut/trend_sniper.git](https://github.com/orbeythibaut/trend_sniper.git)
+cd trend_sniper
+
+# Créer l'environnement et installer les dépendances
+uv venv
+source .venv/bin/activate  # ou .venv\Scripts\activate sur Windows
+uv pip install -e .
+ 
+##Run cette consigne dans le REPL/TERMINAL pour lancer le code et le test
 import sys, os, pandas as pd
 sys.path.insert(0, os.path.abspath("src"))
 

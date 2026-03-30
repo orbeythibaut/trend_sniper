@@ -1,0 +1,18 @@
+# pyproject.toml
+[project]
+name = "trend-sniper"
+version = "0.1.0"
+description = "Package de Backtesting de stratégies Trend Following et Sniper (Fat Tails)."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "yfinance",
+    "pandas",
+    "numpy",
+    "matplotlib",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+uv pip install -e .

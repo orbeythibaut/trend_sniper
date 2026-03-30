@@ -2,14 +2,14 @@
 
 Ce projet est une plateforme de backtesting développée en Python, conçue pour analyser et valider des stratégies de trading hybrides sur des actifs technologiques à haute volatilité (TSLA, PLTR, HOOD). 
 
-[cite_start]L'objectif est de démontrer qu'un portefeuille combinant le suivi de tendance (**Trend**) et la capture d'événements extrêmes (**Sniper/Fat-Tails**) permet d'optimiser le ratio de Calmar et la convexité globale du portefeuille[cite: 1, 8].
+L'objectif est de démontrer qu'un portefeuille combinant le suivi de tendance (**Trend**) et la capture d'événements extrêmes (**Sniper/Fat-Tails**) permet d'optimiser le ratio de Calmar et la convexité globale du portefeuille.
 
 ## 🧠 Stratégies Implémentées
 
-[cite_start]Le projet segmente l'univers d'investissement en deux clusters distincts[cite: 40, 41]:
+Le projet segmente l'univers d'investissement en deux clusters distincts:
 
-1.  **Stratégie Trend (Suivi de Tendance)** : Basée sur les cassures de canaux de Donchian (20 jours). [cite_start]Elle vise à capturer le momentum moyen terme avec une gestion stricte du risque via un Stop-Loss et un Break-Even actif[cite: 72, 74, 78].
-2.  **Stratégie Sniper (Fat-Tail Hunter)** : Exploite les phases de compression de volatilité (Bollinger Band Squeeze). [cite_start]Elle cherche à capturer des mouvements explosifs ("Cygnes Noirs") en acceptant un taux de réussite plus faible en échange d'une asymétrie positive massive[cite: 81, 83, 87].
+1.  **Stratégie Trend (Suivi de Tendance)** : Basée sur les cassures de canaux de Donchian (20 jours). Elle vise à capturer le momentum moyen terme avec une gestion stricte du risque via un Stop-Loss et un Break-Even actif.
+2.  **Stratégie Sniper (Fat-Tail Hunter)** : Exploite les phases de compression de volatilité (Bollinger Band Squeeze). Elle cherche à capturer des mouvements explosifs ("Cygnes Noirs") en acceptant un taux de réussite plus faible en échange d'une asymétrie positive massive.
 
 ## 🛠️ Architecture Technique
 

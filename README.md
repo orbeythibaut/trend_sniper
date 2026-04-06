@@ -1,7 +1,7 @@
 # Trend Sniper — Analyse Quantitative & Backtesting de Stratégies Asymétriques
 
-**Auteurs :** Thibaut Orbey & Groupe de Projet
-**Institution :** Université Paris Dauphine — Cours de Python Appliqué à la Finance (R. Schwartz)
+**Auteurs :** Thibaut Orbey & Louis Laroche
+**Institution :** Université Paris Dauphine — Cours de Python Appliqué à la Finance (R.S)
 **Période d'Analyse :** 2021–2025
 
 ---
